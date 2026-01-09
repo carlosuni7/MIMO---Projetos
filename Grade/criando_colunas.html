@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando um CSS GRID</title>
+    <style>
+        body {
+            height: 100vh;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .btn {
+            background-color: #015958;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            border-radius: 40px;
+            border: none;
+            width: fit-content;
+            transition: 0.2s linear;
+        }
+
+        .btn:hover{
+            background-color: #008F8C;
+            border: inset 2px solid #015958;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            gap: 50px;
+            justify-content: center;
+        }
+
+        h3 {
+            margin: 20px auto;
+            width: fit-content;
+        }
+        .item {
+            background-color: #008F8C;
+            padding: 20px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .container {
+            background-color: #90f7f5;
+            border: dashed 1px #008F8C;
+            padding: 10px;
+            width: 500px;
+            height: 300px;
+            margin: 0 auto;
+            transition: all 0.2s ease;
+        }
+        .grid-container {
+            display: grid;
+            gap: 10px;
+        }
+
+        .flex-container {
+            display: flex;
+            gap: 10px;
+
+            .item1, .item2, .item3, .item4 {
+                flex: 1 1 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <button id="grid-4" class="btn">4 Grid columns</button>
+        <button id="grid-2" class="btn">2 Grid columns</button>
+    </header>
+
+    <div id="container" class="container grid-container">
+        <div id="um" class="item item1">1</div>
+        <div id="dois" class="item item2">2</div>
+        <div id="tres" class="item item3">3</div>
+        <div id="quatro" class="item item4">4</div>
+    </div>
+
+    <script>
+        const grid2 = document.getElementById("grid-2");
+        const grid4 = document.getElementById("grid-4")
+       const container = document.getElementById("container")
+        grid2.addEventListener('click', () => {
+            container.style.grid;
+            container.style.gridTemplateColumns = "repeat(2, 1fr)";
+        })
+
+        grid4.addEventListener('click', () => {
+            container.style.grid;
+            container.style.gridTemplateColumns = "repeat(4, 1fr)";
+        })
+    </script>
+</body>
+</html>

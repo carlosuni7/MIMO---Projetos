@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS extra mínimo -->
+    <style>
+        /* remove o marcador padrão do <summary> */
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        /* rotaciona o ícone quando o details está aberto */
+        details[open] summary .chevron {
+            transform: rotate(180deg);
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <!-- Exemplo de bloco estilizado -->
+    <div class="max-w-3xl mx-auto mt-8 space-y-4 px-4">
+        <!-- Card estilizado -->
+        <details class="rounded-2xl bg-white/60 backdrop-blur-md border border-white/10 shadow-lg overflow-hidden">
+            <summary
+                class="flex items-center justify-between px-5 py-4 cursor-pointer select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-400"
+                aria-expanded="false">
+                <div class="flex items-center gap-4">
+                    <!-- ícone à esquerda (pode substituir por img/logo) -->
+                    <div
+                        class="flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-br from-purple-400 to-pink-400 shadow-inner">
+                        <!-- exemplo de ícone simples -->
+                        <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M12 4v16" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M6 10h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold text-slate-900">Pergunta frequente</h3>
+                        <p class="text-sm text-slate-600/90">Uma linha curta que resume o conteúdo</p>
+                    </div>
+                </div>
+
+                <!-- ícone chevron -->
+                <svg class="chevron w-5 h-5 text-slate-500 transition-transform duration-300" viewBox="0 0 24 24"
+                    fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </summary>
+
+            <!-- conteúdo oculto -->
+            <div class="px-5 pb-6 pt-2 text-slate-700 leading-relaxed">
+                <p class="mb-3">Aqui vai o texto com a resposta ou conteúdo adicional. Você pode colocar parágrafos,
+                    listas, imagens ou até mesmo botões.</p>
+
+                <ul class="list-disc pl-5 space-y-1 text-sm text-slate-600">
+                    <li>Ponto 1 explicativo</li>
+                    <li>Ponto 2 com detalhe</li>
+                    <li>Ponto 3 com link <a class="text-indigo-600 underline" href="#">ver mais</a></li>
+                </ul>
+
+                <!-- CTA opcional -->
+                <div class="mt-4">
+                    <button
+                        class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold shadow-md hover:brightness-105 transition">
+                        Saiba mais
+                    </button>
+                </div>
+            </div>
+        </details>
+
+        <!-- Variante compacta (só summary + texto simples) -->
+        <details class="rounded-lg bg-white/50 border border-white/8 px-4 py-3">
+            <summary class="flex justify-between items-center cursor-pointer text-slate-800 font-medium">
+                Como funciona?
+                <svg class="chevron w-4 h-4 text-slate-600 transition-transform duration-300" viewBox="0 0 24 24"
+                    fill="none">
+                    <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </summary>
+            <div class="mt-2 text-sm text-slate-700">
+                Resposta curta e direta, ótima para FAQ.
+            </div>
+        </details>
+    </div>
+
+
+
+
+
+</body>
+
+</html>

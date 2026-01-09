@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border: 1px solid #000;
+            padding: 1rem;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h3>Student FeedBack</h3>
+        <input type="text" placeholder="name">
+        <br>
+        <textarea type="tex" placeholder="Your feedback"></textarea>
+    </div>
+
+    <div>
+        <img id="profilePic" height="45" src="https://mimo.app/i/hacker.png" alt="hacker">
+        <textarea id="sendText" type="text" placeholder="Whats happening?" rows="4" cols="20"></textarea><br>
+        <button onclick="sendPost()">Send</button>
+        <p id="result"></p>
+    </div>
+    <div>
+        <button onclick="changeLayout()">Change layout</button>
+        <h4>Pics</h4>
+        <img src="https://mimo.app/i/camera.png" alt="">
+        <img src="https://mimo.app/i/backpack.png" alt="">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

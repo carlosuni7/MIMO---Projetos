@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+        }
+        .main{
+            margin: 50px;
+        }
+
+        /* .div-row {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .div-column{
+            display: flex;
+            flex-direction: column;
+        } */
+
+        .container{
+            margin-top: 20px;
+            display: flex;
+        }
+
+        .item{
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            margin: 5px;
+        }
+
+        .item:nth-child(1) {
+            border: 1px solid black;
+            background-color: #0FC2C0;
+            color: #023535;
+            padding: 20px;
+        }
+        .item:nth-child(2) {
+            border: 1px solid black;
+            background-color: #008F8C;
+            padding: 20px;
+            color: white;
+        }
+        .item:nth-child(3) {
+            border: 1px solid black;
+            background-color: #023535;
+            padding: 20px;
+            color: #0FC2C0;
+        }
+        button {
+            background-color: #015958;
+            color: white;
+            padding: 10px 14px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <button id="btn-row">row</button>
+        <button id="btn-column">column</button>
+        <button id="btn-rowReverse">row reverse</button>
+        <button id="btn-columnReverse">Column reverse</button>
+
+        <h2>Orientation</h2>
+        <div id="container" class="container div-row">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+    </div>
+    
+    <script>
+        // O .style é um objeto, não uma função. Então você não usa parênteses () — usa atribuição (=).
+
+        const btnColuna = document.getElementById("btn-column");
+        const colunaReverse = document.getElementById("btn-columnReverse");
+        const btnLinha = document.getElementById("btn-row");
+        const linhaReverse = document.getElementById("btn-rowReverse")
+        const container = document.getElementById("container");
+
+        btnColuna.addEventListener('click', () =>{
+            // container.classList.add("div-column")
+            // container.classList.remove("div-row")
+            container.style.flexDirection = "column";
+        })
+
+        btnLinha.addEventListener('click', () =>{
+            // container.classList.remove("div-column")
+            // container.classList.add("div-row")
+            container.style.flexDirection = "row";
+        })
+        linhaReverse.addEventListener('click', () =>{
+            container.style.flexDirection = "row-reverse";
+            
+        })
+        colunaReverse.addEventListener('click', () =>{
+            container.style.flexDirection = "column-reverse";
+        })
+    </script>
+</body>
+
+</html>

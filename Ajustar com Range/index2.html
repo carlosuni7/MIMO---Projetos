@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo Input Range</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+input[type="range"] {
+  width: 300px;
+  accent-color: #4caf50; /* cor do controle no Chrome/Edge modernos */
+}
+
+#valor {
+  display: inline-block;
+  margin-left: 10px;
+  font-weight: bold;
+  color: #4caf50;
+}
+
+  </style>
+</head>
+<body>
+  <h2>Controle de Volume 🎚️</h2>
+
+  <input type="range" id="volume" min="0" max="100" value="50">
+  <span id="valor">50</span>
+
+  <script>
+    const range = document.getElementById('volume');
+const valor = document.getElementById('valor');
+
+// Atualiza o número conforme o usuário move o slider
+range.addEventListener('input', () => {
+  valor.textContent = range.value;
+});
+
+  </script>
+</body>
+</html>

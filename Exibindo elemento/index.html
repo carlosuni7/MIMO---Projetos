@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios</title>
+
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+            overflow-y: hidden;
+        }
+
+        .quadrado {
+            width: 350px;
+            height: 350px;
+            border-radius: 10px;
+            background-color: blue;
+        }
+
+        .position-0 {
+            position: absolute;
+            top: 2500px;
+            left: 50%;
+            opacity: 0;
+            transform: translateX(-50%);
+            transition: 0.8s all ease-out;
+        }
+
+        .position-1 {
+            transition: 1s all ease-in-out;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            opacity: 1;
+            transform: translate(-50%,-50%);
+        }
+
+        button {
+            position: fixed;
+            right: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="quadrado position-0"></div>
+    <button onclick="mudarPosition()">Mudar Posição</button>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecionado</title>
+    <style>
+        body {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 250px 250px 250px;
+            grid-template-rows: 200px 200px 200px;
+        }
+        div {
+            border: 1px solid #000;
+            padding: 1rem;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h4>Choose a Language</h4>
+    <!-- Criamos elementos de seleção usando a tag -->
+     <select name="" id="langSelect">
+        <option value="">English</option>
+        <option value="" selected>Portuguese</option>
+        <option value="">French</option>
+        <option value="">German</option>
+        <option value="">Hebreu</option>
+     </select>
+     </div>
+     <div>
+        <h4>Favorite Color</h4>
+        <select name="" id="colorSelect">
+            <option value="Blue">Blue</option>
+            <option value="Green">Green</option>
+            <option value="Red">Red</option>
+        </select>
+        <button onclick="showSelection()">Submit</button>
+        <p id="result"></p>
+     </div>
+     <div>
+        <h4>Sign Up</h4>
+        <select name="" id="marcaSelect">
+            <option value="volvo">Volvo</option>
+        </select>
+        <select name="" id="">
+            <option value="saab">Saab</option>
+        </select>
+     </div>
+     <div>
+        <h4>Select your country</h4>
+        <select name="country" id="countrySelect">
+            <option value="usa">USA</option>
+            <option value="canada">Canada</option>
+            <option value="brazil">Brazil</option>
+            <option value="áfrica">África</option>
+        </select>
+        <button onclick="showCountry()">Submit</button>
+        <p id="resultC"></p>
+     </div>
+     <div>
+        <p>Now playing: <em>On the Road Again</em></p>
+        <p>Volume:</p>
+        <select name="volume" id="volSelect">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select>
+        <button onclick="showVolume()">Submit</button>
+        <p id="resultVol"></p>
+    
+     </div>
+     <div>
+        <h4>Choose a genre</h4>
+        <select name="categories" id="genreSelect">
+            <option value="" selected disabled>Select preference</option>
+            <option value="1">Country</option>
+            <option value="2">Pop</option>
+            <option value="3">Rap</option>
+        </select>
+     </div>
+
+     <div>
+        <img id="profilePic" height="45" src="https://mimo.app/i/hacker.png" alt="hacker">
+        <select id="options">
+            <option value="Option 1">Option 1</option>
+            <option value="Option 2">Option 2</option>
+        </select>
+        <button onclick="selOptions()">Submit</button>
+        <p id="resultOp"></p>
+     </div>
+     <div>
+        <select name="" id="searchSelect">
+            <option value="Option 1">Option 1</option>
+            <option value="Option 2">Option 2</option>
+        </select>
+        <button onclick="search()">Search</button>
+        <p id="message"></p>
+     </div>
+     <script src="script.js"></script>
+</body>
+</html>
