@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo trivia</title>
+
+    <style>
+        .result{
+            font-weight: bold;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+
+         .incorreto{
+            color: red;
+        }
+
+         .correto{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    
+    <main>
+        <h2>Simple Trivia</h2>
+
+        <p>Que planeta é conhecido como Planeta Vermelho?</p>
+
+        <div class="resposta">
+            <button class="btn">Terra</button>
+            <button class="btn">Marte</button>
+            <button class="btn">Jupiter</button>
+            <button class="btn">Saturno</button>
+        </div>
+
+        <p class="result"></p>
+    </main>
+
+    <script>
+        const botao = document.querySelectorAll('.btn');
+        let resultado = document.querySelector('.result');
+
+        botao.forEach(btn => {
+            let texto = btn.textContent;
+            btn.addEventListener('click', ()=>{
+                if(texto === 'Marte'){
+                    resultado.classList.remove(".incorreto");
+                    resultado.classList.add("correto");
+                    resultado.innerHTML = 'Correto! Marte é conhecido como o Planeta Vermelho.';
+                } 
+
+                
+                if(texto !== 'Marte'){
+                resultado.classList.remove("correto");
+                resultado.classList.add("incorreto");
+                resultado.innerHTML = 'Incorreto! Tente novamente.';
+                }
+            })
+        })
+    
+        let respostas = ['Terra', 'Marte', 'Jupiter', 'Saturno'];
+        console.log(typeof respostas);
+
+        
+    </script>
+</body>
+</html>
