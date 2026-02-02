@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+        label,
+        input,
+        button {
+            display: block;
+            margin-top: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+        }
+
+        .negado {
+            color: red;
+        }
+
+        .aprovado {
+            color: green;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        input.alert:focus {
+            outline: 1px solid red;
+        }
+
+        button {
+            padding: 10px 15px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <p style="font-size: 25px; text-align: center;">Sistema de <br> Aprovação de Crédito</p>
+
+        <label for="idade">Idade</label>
+        <input type="number" name="idade" id="idade">
+        <span class="idadeSpan"></span>
+        <br>
+        <label for="renda">Renda Mensal</label>
+        <input type="number" name="renda" id="rendaMensal">
+        <span class="rendaSpan"></span>
+        <br>
+        <label for="score">Score de Crédito</label>
+        <input type="number" name="score" id="scoreCredito">
+        <span class="scoreSpan"></span>
+        <br>
+        <button type="button">Verificar</button>
+
+        <p id="resultado"></p>
+    </main>
+
+    <script>
+
+        const rendaIn = document.getElementById('rendaMensal');
+        const idadeIn = document.getElementById('idade');
+        const scoreIn = document.getElementById('scoreCredito');
+        const button = document.querySelector('button');
+        const resultado = document.getElementById('resultado');
+        // REGRA:
+        // Idade minima para solicitar o credito: 18 anos
+        // Renda minima: 2000
+        // let idadeSpan = document.querySelector(".idadeSpan");
+        // let rendaSpan = document.querySelector(".rendaSpan");
+        // let scoreSpan = document.querySelector(".scoreSpan");
+
+        function limparResultado(){
+            resultado.textContent = "";
+            resultado.classList.remove('negado');
+        }
+        // INPUT não usa textContent, usa VALUE
+        function limparInput(idadeIn, rendaIn, scoreIn) {
+            idadeIn.value = "";
+            rendaIn.value = "";
+            scoreIn.value = "";
+        }
+
+        button.addEventListener('click', ()=>{
+            let idade = Number(idadeIn.value);
+            let renda = Number(rendaIn.value);
+            let score = Number(scoreIn.value);
+
+            if(idade < 18 || renda < 2000){
+                resultado.style.color = "red";
+                resultado.textContent = "Crédito Negado";
+                setTimeout(limparResultado, 2000);
+            return
+            }
+
+            const analiseScore =
+            score < 500 ? "Crédito negado" 
+            : score <= 699 
+            ? "Crédito aprovado com juros altos" : "Crédito aprovado";
+
+            // Definindo cor do resultado com condição ternaria
+            resultado.style.color = analiseScore === "Crédito aprovado" ? "green" : "red";
+            
+            resultado.textContent = analiseScore;
+            
+            limparInput(idadeIn, rendaIn, scoreIn);
+        })
+    </script>
+
+</body>
+
+</html>

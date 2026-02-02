@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+
+}
+
+div {
+    height: 100vh;
+}
+
+.item1 {
+    background-color: aqua;
+}
+
+.item2 {
+    background-color: burlywood;
+}
+
+.item3 {
+    background-color: tomato;
+}
+
+.item4 {
+    background-color: blueviolet;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all .6 ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+} 

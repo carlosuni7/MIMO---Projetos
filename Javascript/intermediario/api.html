@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requisição de API</title>
+</head>
+<body>
+    
+    <script>
+
+        let fullcidade = "São Paulo";
+
+        //  Dados Necessários para requisição da API
+        const chaveAPI = `1c4b16472784304bfa3f937a60258b57`;
+        const url = `https://api.openweathermap.org/data/3.0/onecall?lat=33.44&lon=-94.04&appid=${chaveAPI}`
+        fetch(url)
+            .then(dadosopen => dadosopen.json()) // Converte a resposta para json
+            .then(dados => {
+                console.log(dados)
+            })
+
+            .catch(error => {
+                console.erro('Erro', error) // trata erros
+            });
+
+
+    </script>
+</body>
+</html>
