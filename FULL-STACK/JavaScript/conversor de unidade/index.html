@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unit Converter</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #f9f9ff;
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        margin: 50px;
+        border: 1px solid #4a4d85;
+        background-color: #333661;
+        padding: 50px 30px;
+        width: fit-content;
+      }
+
+      .calculo {
+        margin-top: 20px;
+        display: flex;
+        gap: 8px;
+        align-items: end;
+      }
+
+      input[type="number"] {
+        padding: 10px;
+        height: 30px;
+        width: 200px;
+      }
+      input:focus,
+      select:focus {
+        outline: none;
+      }
+      select {
+        width: 150px;
+        height: 30px;
+        padding: 0px 10px 0px 10px;
+        appearance: none;
+      }
+
+      button {
+        border: none;
+        height: 30px;
+        width: 80px;
+        background-color: #fff;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #f9f9f9;
+      }
+
+      .resultado {
+        padding: 10px;
+        font-size: 16px;
+        background-color: #5156aa;
+        margin-top: 20px;
+        width: 450px;
+      }
+
+      .erro {
+        background-color: white;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h2>Unidade de Conversão</h2>
+
+      <div class="calculo">
+        <input id="inputValor" type="number" placeholder="insira valor" />
+
+        <div class="selecao">
+          <select name="" id="selecao">
+            <option value="kilometro">Milha to Quilômetro</option>
+            <option value="milha">Quilômetro to Milha</option>
+          </select>
+        </div>
+
+        <button id="botao">convert</button>
+      </div>
+
+      <p id="resultado" class="resultado">Resultado: 0</p>
+    </main>
+
+    <script src="script.js"></script>
+    
+    <!-- JEITO CARLOS DE PRIMEIRA VEZ
+    <script>
+
+      const selecionado = document.getElementById("selecao").value;
+      console.log(selecionado);
+
+      function converter() {
+        // const botao = document.getElementById("botao");
+        const selecionado = document.getElementById("selecao").value;
+        const texto = document.getElementById("resultado");
+        const valor = document.getElementById("inputValor").value;
+
+        let numero;
+        console.log(selecionado);
+
+        if (selecionado === "kilometro") {
+          numero = Number(valor) * 1.609;
+          texto.innerHTML = `Resultado: ${numero.toFixed(3)} Quilômetros`;
+
+        } else if (selecionado === "milha") {
+          numero = Number(valor) / 1.609;
+          texto.innerHTML = `Resultado: ${numero.toFixed(3)} Milhas`;
+        }
+      
+      }
+    </script>  -->
+  </body>
+</html>
