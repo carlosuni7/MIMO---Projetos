@@ -8,8 +8,8 @@ let levelDoAmigo = meuLevel; // Copiou o valor 50
 
 levelDoAmigo = 55; // Alterou a cópia
 
-console.log(meuLevel) // Saida: 50 (A variavel original não mudou)
-console.log(levelDoAmigo) // Saida: 55 (Alteramos apenas a cópia)
+// console.log(meuLevel) // Saida: 50 (A variavel original não mudou)
+// console.log(levelDoAmigo) // Saida: 55 (Alteramos apenas a cópia)
  console.log("======")
 // Passagem por REFERÊNCIA (Objetos)
 let meuDev = { nome: "Carlos", level: 90};
@@ -17,8 +17,8 @@ let devCompanheiro = meuDev; // Copiou a REFERÊNCIA (a "chave da casa");
 
 devCompanheiro.level = 99; // Alterou o objeto original através da referência.
 
-console.log(meuDev.level); // O original mudou
-console.log(devCompanheiro.level) // Saida: 99 // Variavel que armazena a refencia do objeto
+// console.log(meuDev.level); // O original mudou
+// console.log(devCompanheiro.level) // Saida: 99 // Variavel que armazena a refencia do objeto
 
 // NOTAÇÃO POR COLCHETES
 // Usamos a notação por colchetes quando o nome da propriedade contem espaço, hifens etc...
@@ -30,7 +30,7 @@ let relatorio = {
     "id-do-usuario" : "abc-123"
 };
 
-console.log(relatorio["data de criação"])
+// console.log(relatorio["data de criação"])
 
 // Bora ADICIONAR ALTERAR E REMOVER PROPRIEDADES
 
@@ -62,8 +62,8 @@ function Dev(nome, level, techs) {
 let devBrendo = new Dev("Brendo", 25, "Full-Obra");
 let devPh = new Dev("Ph", 21, "Java-Pro");
 
-console.log(devBrendo.nome); // Saida: Brando
-console.log(devPh.techs); // Saida: Java-Pro
+// console.log(devBrendo.nome); // Saida: Brando
+// console.log(devPh.techs); // Saida: Java-Pro
 
 arrayDevs.push(devBrendo, devPh)
 console.log(arrayDevs)
@@ -87,5 +87,5 @@ let perfilDev = {
 } // Um objeto completasso
 
 // Para acessar as propriedades aninhadas encadeamos a notação de ponto
-console.log(perfilDev.contato.email);
-console.log(perfilDev.skills.frontEnd);
+// console.log(perfilDev.contato.email);
+// console.log(perfilDev.skills.frontEnd);

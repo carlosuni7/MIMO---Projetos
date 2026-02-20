@@ -1,6 +1,5 @@
 // Se existir algo salvo carrega
 // Se não existir nada, cria um arrays vazio
-
 let arraysDev = JSON.parse(localStorage.getItem("devs")) || [];
 
 // Essa função salvar no local storage do navegador o arrayDev

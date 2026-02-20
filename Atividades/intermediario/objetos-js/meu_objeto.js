@@ -26,15 +26,15 @@ console.log(exibir);
 console.log(perfilDev)
 // 1 - Adicionando uma nova propriedade
 perfilDev.cidade = "Sud Mennucci";
-console.log(perfilDev.cidade)
+// console.log(perfilDev.cidade)
 
 // 2 - Alterando propriedade
 perfilDev.level = 23;
-console.log(perfilDev.level)
+// console.log(perfilDev.level)
 
 // 3 _ Removendo uma propriedade
 delete perfilDev.ativo;
-console.log(perfilDev.ativo)
+// console.log(perfilDev.ativo)
 
 // console.log(perfilDev.nome) // Saida "carlos"
 
