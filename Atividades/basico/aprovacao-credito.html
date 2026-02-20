@@ -15,6 +15,14 @@
             justify-content: center;
         }
 
+        div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            width: 320px;
+        }
         main {
             padding: 20px;
         }
@@ -26,7 +34,7 @@
         }
 
         input {
-            width: 100%;
+            width: 190px;
             padding: 8px;
         }
 
@@ -58,17 +66,28 @@
     <main>
         <p style="font-size: 25px; text-align: center;">Sistema de <br> Aprovação de Crédito</p>
 
-        <label for="idade">Idade</label>
-        <input type="number" name="idade" id="idade">
-        <span class="idadeSpan"></span>
+        <div>
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome">
+        </div>
+        <div>
+            <label for="idade">Idade</label>
+            <input type="number" name="idade" id="idade">
+            
+        </div>
+        
         <br>
-        <label for="renda">Renda Mensal</label>
-        <input type="number" name="renda" id="rendaMensal">
-        <span class="rendaSpan"></span>
+        <div>
+            <label for="renda">Renda Mensal</label>
+            <input type="number" name="renda" id="rendaMensal">
+            
+        </div>
         <br>
-        <label for="score">Score de Crédito</label>
-        <input type="number" name="score" id="scoreCredito">
-        <span class="scoreSpan"></span>
+        <div>
+            <label for="score">Score de Crédito</label>
+            <input type="number" name="score" id="scoreCredito">
+            
+        </div>
         <br>
         <button type="button">Verificar</button>
 
@@ -105,22 +124,22 @@
             let renda = Number(rendaIn.value);
             let score = Number(scoreIn.value);
 
-            if(idade < 18 || renda < 2000){
-                resultado.style.color = "red";
-                resultado.textContent = "Crédito Negado";
-                setTimeout(limparResultado, 2000);
-            return
-            }
+            // if(idade < 18 || renda < 2000){
+            //     resultado.style.color = "red";
+            //     resultado.textContent = "Crédito Negado";
+            //     setTimeout(limparResultado, 2000);
+            // return
+            // }
 
-            const analiseScore =
-            score < 500 ? "Crédito negado" 
-            : score <= 699 
-            ? "Crédito aprovado com juros altos" : "Crédito aprovado";
+            // const analiseScore =
+            // score < 500 ? "Crédito negado" 
+            // : score <= 699 
+            // ? "Crédito aprovado com juros altos" : "Crédito aprovado";
 
-            // Definindo cor do resultado com condição ternaria
-            resultado.style.color = analiseScore === "Crédito aprovado" ? "green" : "red";
+            // // Definindo cor do resultado com condição ternaria
+            // resultado.style.color = analiseScore === "Crédito aprovado" ? "green" : "red";
             
-            resultado.textContent = analiseScore;
+            // resultado.textContent = analiseScore;
             
             limparInput(idadeIn, rendaIn, scoreIn);
         })

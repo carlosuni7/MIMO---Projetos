@@ -18,6 +18,8 @@
 
 
             --primary: #252746;
+            --secondary: #4A4D85;
+            --
 
             --text: "Inter", sans-serif;
         }
@@ -25,7 +27,7 @@
     </style>
 </head>
 
-<body class="bg-blue-600">
+<body class="text-white text-(--text)">
     <div id="root"></div>
 
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
@@ -36,11 +38,9 @@
 
 
     <script type="text/babel">
-        
-        import "./components.css"
 
         const fontVariant = {
-            default: 'text-xl',
+            default: 'text-base',
             muted: 'text-2xl'
 
         }
@@ -48,15 +48,19 @@
         function Header({children, className, ...props}) {
             return (
                 <>
-                    <header className="min-w-full bg-[var(--primary)]">
-                        
+                    <header className="min-w-full bg-[var(--primary)] border-b-2 border-solid border-[var(--secondary)] py-3
+                    px-[4%] flex flex-row 
+                    ">
                     {children}
                     </header>
                 </>
             )
         }
 
-        function Text(as, variant = 'default', className, children, ...props) {
+        function Text({as,
+        variant = 'default',
+        className, children,
+        ...props}) {
 
             return React.createElement(
                     as,
@@ -73,15 +77,29 @@
                 <div className="main bg-color main">
 
                     <Header>
-                        <Text as="a" variant="default
+                        <div className="flex-1">
+
+                        </div>
+                        <nav className="flex-1">
+                            <ul>
+                                <li><Text as="a" variant="default" href="#" >Learn</Text></li>
+                                <li><Text as="a" variant="default" href="#" >Practice</Text></li>
+                                <li><Text as="a" variant="default" href="#" >Build</Text></li>
+                                <li><Text as="a" variant="default" href="#" >Library</Text></li>
+                                <li><Text as="a" variant="default" href="#" >Live Sessions</Text></li>
+                                <li><Text as="a" variant="default" href="#" >LeaderBoard</Text></li>
+                                
+                            </ul>
+                        </nav>
+                        <div className="flex-1">
+                            <Text as="span" variant="default" className="py-1 px-2 border-2 rounded-lg border-[var(--secondary)] font-medium w-fit">99 coin</Text>
+                            <Text as="span" variant="default" className="py-1 px-2 border-2 rounded-lg border-[var(--secondary)] font-medium w-fit">5 days</Text>   
                         
-                        ">Learn</Text>
+                        </div>
                     </Header>
                     <div>Loading</div>
                 </div>
             )
-
-
         }
 
         ReactDOM.createRoot(document.getElementById('root')).render(
