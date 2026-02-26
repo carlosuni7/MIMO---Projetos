@@ -24,8 +24,8 @@ addPessoa = criar_pessoa(nome, idade)
 listaDePessoas.append(addPessoa)
 print(listaDePessoas)
 
-i = 1
-while i < 2:
+i = True
+while i:
     
     nome = input("Insira um nome: ")
     idade = int(input("Insira sua idade: "))
@@ -51,3 +51,14 @@ while i < 2:
     listaDePessoas.append(addPessoa)
     print(listaDePessoas)
 
+    pergunta =  input("Deseja continuar o Cadastro? ( S - Sim / N - Não)")
+    resposta = pergunta.upper()
+    
+    if resposta == "S":
+        continue
+    else:
+        break
+
+
+for x in listaDePessoas:
+    print(x)
