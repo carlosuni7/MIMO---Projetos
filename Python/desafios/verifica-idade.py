@@ -1,8 +1,5 @@
 listaDePessoas = []
 
-nome = input("Insira um nome: ")
-idade = int(input("Insira sua idade: "))
-
 #Funções devem ser independentes e reutilizáveis.
 def statusfun(idade):
     if idade >= 18:
@@ -15,39 +12,23 @@ def criar_pessoa(nomeinput, idadeinput):
     pessoa = {
         "nome": nomeinput,
         "idade": idadeinput,
-        "status": statusfun(idade),
+        "status": statusfun(idadeinput),
         "universo": "Dragon Ball Z"
     }
     return pessoa
 
-addPessoa = criar_pessoa(nome, idade)
-listaDePessoas.append(addPessoa)
-print(listaDePessoas)
+# addPessoa = criar_pessoa(nome, idade)
+# listaDePessoas.append(addPessoa)
+# print(listaDePessoas)
 
 i = True
 while i:
-    
     nome = input("Insira um nome: ")
     idade = int(input("Insira sua idade: "))
 
     #Funções devem ser independentes e reutilizáveis.
-    def statusfun(idade):
-        if idade >= 18:
-            return "Maior de idade"
-        else:
-            return "Menor de idade"
-                
-
-    def criar_pessoa(nomeinput, idadeinput):
-        pessoa = {
-        "nome": nomeinput,
-        "idade": idadeinput,
-        "status": statusfun(idade),
-        "universo": "Dragon Ball Z"
-        }
-        return pessoa
-
     addPessoa = criar_pessoa(nome, idade)
+
     listaDePessoas.append(addPessoa)
     print(listaDePessoas)
 
@@ -59,6 +40,6 @@ while i:
     else:
         break
 
-
+print("\nLista Final de Pessoas: ")
 for x in listaDePessoas:
     print(x)
