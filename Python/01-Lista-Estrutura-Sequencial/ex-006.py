@@ -1,8 +1,19 @@
-inNotaUm = float(input("Insira primeira nota: "))
-inNotaDois = float(input("Insira segunda nota: "))
-inNotaTres = float(input("Insira terceira nota: "))
-inNotaQuatro = float(input("Insira quarta nota: "))
+import math
 
-resultadoMedia = (inNotaUm + inNotaDois + inNotaTres + inNotaQuatro) / 4
+pi:float = 3.14
 
-print(f"Resultado da Média: {resultadoMedia}")
+raio = float(input("Insira um Raio de um Circulo: "))
+
+def calcularArea(pi, raio):
+    return pi * (raio * raio)
+
+area = calcularArea(pi, raio)
+
+print(f"A área do circulo é: {area:.1f}cm**2 ")
+
+#Usando biblioteca Math
+
+raio = float(input("Digite o raio: "))
+area = math.pi * (raio ** 2)
+
+print(f"A área do circulo é: {area:.2f}cm")
