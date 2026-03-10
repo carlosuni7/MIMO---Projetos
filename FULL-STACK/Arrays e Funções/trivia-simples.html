@@ -4,22 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo trivia</title>
-
-    <style>
-        .result{
-            font-weight: bold;
-            margin-top: 20px;
-            font-size: 20px;
-        }
-
-         .incorreto{
-            color: red;
-        }
-
-         .correto{
-            color: green;
-        }
-    </style>
+    <link rel="stylesheet" href="trivia-simples.css">
 </head>
 <body>
     
@@ -38,32 +23,6 @@
         <p class="result"></p>
     </main>
 
-    <script>
-        const botao = document.querySelectorAll('.btn');
-        let resultado = document.querySelector('.result');
-
-        botao.forEach(btn => {
-            let texto = btn.textContent;
-            btn.addEventListener('click', ()=>{
-                if(texto === 'Marte'){
-                    resultado.classList.remove(".incorreto");
-                    resultado.classList.add("correto");
-                    resultado.innerHTML = 'Correto! Marte é conhecido como o Planeta Vermelho.';
-                } 
-
-                
-                if(texto !== 'Marte'){
-                resultado.classList.remove("correto");
-                resultado.classList.add("incorreto");
-                resultado.innerHTML = 'Incorreto! Tente novamente.';
-                }
-            })
-        })
-    
-        let respostas = ['Terra', 'Marte', 'Jupiter', 'Saturno'];
-        console.log(typeof respostas);
-
-        
-    </script>
+    <script src="trivia-simples.js"></script>
 </body>
 </html>

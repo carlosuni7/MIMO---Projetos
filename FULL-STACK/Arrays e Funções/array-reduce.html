@@ -9,45 +9,7 @@
     
     <h1>.reduce()</h1>
     <p style="width: 500px;">É uma função em JavaScript que podemos usar para converter uma série de valores de um array em um único valor</p>
-
-    <script>
-        const miles = [33, 95, 79];
-        let total = 0;
-        // converte uma serie de valores do array em um unico peso
-        for (const element of miles) {
-        // Soma a variavel, um elemento/valor por vez
-        // Nessa caso soma entre o ultimo e o proximo
-            total += element;
-        } // Essa é uma forma manual de se fazer
-        console.log(total);
-
-        console.log("===========================")
-
-        const milesIn = [33, 95, 79];
-        let totalIn = milesIn.reduce(function(prev, curr){
-            //console.log(prev); // O prev pega o primeiro valor do array arr[0]
-            //console.log(curr); // O curr pega o proximo valor do array
-            return prev + curr;
-        })
-        console.log(totalIn)
-
-        console.log("===========================")
-
-        const inTotal = miles.reduce((prevVal, currVal) => prevVal + currVal)
-        console.log(inTotal)
-
-        console.log("===========================")
-
-        // Essa função reduce a usamos para percorrer um array e executar um ação com os valores deste array
-        const prices = [17.50, 20.25, 24.75, 13.50, 8.50];
-        const discountFactor = [0.9, 0.9, 1.0, 1.0, 0.9];
-        const resultadoDisconto = []
-        const totalDis = prices.reduce(function(prevVal, currVal, index){
-            return prevVal + (currVal * discountFactor[index])
-        })
-
-        console.log(totalDis)
-    </script>
-
+    
+    <script src="array-reduce.js"></script>
 </body>
 </html>

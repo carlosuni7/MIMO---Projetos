@@ -1,0 +1,13 @@
+.result {
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.incorreto {
+    color: red;
+}
+
+.correto {
+    color: green;
+}

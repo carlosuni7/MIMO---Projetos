@@ -1,22 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h3>Usando Multiplos Parametros</h3>
-    
-    <div class="form">
-        <input id="nome" type="text" placeholder="nome">
-        <br>
-        <input id="sobrenome" type="text" placeholder="sobrenome">
-        <br>
-        <button id="button">submit</button>
-    </div>
 
-    <script>
         let form = document.getElementById("form");
         let nome = document.getElementById("nome");
         let sobrenome = document.getElementById("sobrenome");
@@ -75,6 +57,3 @@
             
         //     console.log(arrayNome)
         // })
-    </script>
-</body>
-</html>
