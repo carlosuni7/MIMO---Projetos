@@ -1,0 +1,18 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+input[type="range"] {
+  width: 300px;
+  accent-color: #4caf50;
+  /* cor do controle no Chrome/Edge modernos */
+}
+
+#valor {
+  display: inline-block;
+  margin-left: 10px;
+  font-weight: bold;
+  color: #4caf50;
+}
