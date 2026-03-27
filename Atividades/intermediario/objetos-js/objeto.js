@@ -43,8 +43,8 @@ devCompanheiro.level = 36;
 console.log(devCompanheiro.level); // Saída: 36
 
 // 3. Removendo uma propriedade
-delete devCompanheiro.ativo;
-console.log(devCompanheiro.ativo); // Saída: undefined
+// delete devCompanheiro.ativo;
+// console.log(devCompanheiro.ativo); // Saída: undefined
 
 console.log(devCompanheiro);
 
