@@ -1,0 +1,16 @@
+# Java (Ignorar arquivos compilados)
+*.class
+
+# Documentos que não precisam de versão
+*.docx
+*.pdf
+
+# Web/React/TS
+node_modules/
+.env
+dist/
+build/
+
+# Python
+__pycache__/
+.venv/
