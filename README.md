@@ -54,3 +54,39 @@ Sinta-se à vontade para entrar em contato para trocar ideias sobre código!
 ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+
+## 📈 Minha Evolução (Níveis de Dificuldade)
+
+Abaixo estão os exercícios e desafios organizados pelo grau de complexidade:
+
+### 🟢 Nível Básico (Fundamentos)
+Focado em lógica inicial, tags semânticas e os primeiros passos na programação.
+* **[Aprovação de Crédito](./Atividades/basico/aprovacao-credito.html):** Exercício de lógica condicional simples.
+* **[Estrutura Sequencial Python](./Python/01-Lista-Estrutura-Sequencial):** Primeiros cálculos e manipulação de variáveis.
+* **[Exercícios Java Inicial](./Java/Exercicios):** Fundamentos de sintaxe e tipos primitivos.
+
+### 🟡 Nível Intermediário (Domínio e Dinamismo)
+Aqui começo a trabalhar com eventos, manipulação do DOM e lógica mais robusta.
+* **[Objetos JS](./Atividades/intermediario/objetos-js):** Manipulação de formulários e criação de objetos dinâmicos.
+* **[Página com Scroll](./Atividades/intermediario/pagina%20scroll):** Efeitos visuais e manipulação de janelas no navegador.
+* **[Slide de Imagens](./Atividades/intermediario/slide-image):** Carrossel interativo utilizando assets de veículos.
+* **[Estrutura de Decisão Python](./Python/02-Lista-Estrutura-Decisao):** Lógica complexa com múltiplos caminhos.
+
+### 🔴 Nível Avançado (Arquitetura e Frameworks)
+Projetos que envolvem componentes, tipagem e estruturas de desenvolvimento moderno.
+* **[Componentes React](./React):** Criação de interfaces baseadas em componentes e Tailwind CSS.
+* **[TypeScript Core](./TypeScript):** Implementação de tipagem em projetos JavaScript para maior segurança.
+* **[Projetos Full-Stack](./FULL-STACK):** Integração de arrays, funções avançadas (Map/Reduce) e eventos dinâmicos.
+
+## 📊 Status de Progresso
+
+* **HTML/CSS (Flexbox & Grid)**
+  ![Progress](https://geps.dev/progress/85)
+* **JavaScript (DOM & Objetos)**
+  ![Progress](https://geps.dev/progress/70)
+* **Python (Lógica de Decisão)**
+  ![Progress](https://geps.dev/progress/60)
+* **Java (Sintaxe & Exercícios)**
+  ![Progress](https://geps.dev/progress/40)
+* **React & TypeScript**
+  ![Progress](https://geps.dev/progress/25)
