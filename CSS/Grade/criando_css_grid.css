@@ -45,34 +45,38 @@ h3 {
     border: dashed 1px #008F8C;
     padding: 10px;
     width: 500px;
-    height: 300px;
+    /* height: 300px; */
     margin: 0 auto;
     transition: all 0.2s ease;
 }
 
 .grid-container {
     display: grid;
-    gap: 10px;
+    gap: 8px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
 }
 
 .grid-container .item1 {
-    grid-area: span 2 / span 1;
+    /* esta definido como:  */
+    grid-area: span 1 / span 3;
 }
 
 .grid-container .item2 {
-    grid-area: span 1 / span 2;
+    grid-area: span 2 / span 2;
 }
 
-.grid-container .item3,
+.grid-container .item3 {
+    grid-area: span 1 / span 1;
+}
+
 .grid-container .item4 {
     grid-area: span 1 / span 1;
 }
 
 .flex-container {
     display: flex;
-    gap: 10px;
+    gap: 6px;
 
     .item1,
     .item2,

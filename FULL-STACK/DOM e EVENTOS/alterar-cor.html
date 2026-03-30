@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="altera-cor.css" />
+    <title>Altera cor</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="resultado" class="resultado" style="color: black; background-color: rgb(255,255,255);"></div>
+      <div class="inputs inp1">
+        <input
+          oninput="inputRGB()"
+          onchange="inputRGB()"
+          id="rangeRed"
+          type="range"
+          min="0"
+          max="255"
+          step="1"
+          value="255"
+        />
+        <span>VERMELHO</span>
+        <span class="red">255</span>
+      </div>
+      <div class="inputs inp2">
+        <input
+          oninput="inputRGB()"
+          onchange="inputRGB()"
+          id="rangeGreen"
+          type="range"
+          min="0"
+          max="255"
+          step="1"
+          value="99"
+        />
+        <span>VERDE</span>
+        <span class="green">99</span>
+      </div>
+      <div class="inputs inp3">
+        <input
+          oninput="inputRGB()"
+          onchange="inputColor()"
+          id="rangeBlue"
+          type="range"
+          min="0"
+          max="255"
+          step="1"
+          value="71"
+        />
+        <span>BLUE</span>
+        <span class="blue">71</span>
+      </div>
+    </div>
+
+    <script src="alterar-cor.js"></script>
+  </body>
+</html>
