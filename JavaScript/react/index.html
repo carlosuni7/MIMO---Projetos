@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/index.css">
+    <title>Document</title>
+    <style>
+
+        .card{
+            transition: .3s;
+        }
+        .paragrafo{
+            transition: .3s;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <!-- React e react Dom precisa estar sempre na mesma versão -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+      function App({ text }) {
+        const user = {
+          name: "Hedy Lamarr",
+          imageUrl: "https://react.dev/images/docs/scientists/yXOvdOSs.jpg",
+          imageSize: 90,
+        };
+
+        const [show, setShow] = React.useState(false);
+
+        const display = () => {
+          setShow(!show);
+        };
+
+        return (
+          <main className="p-3">
+            <div className="card flex flex-col gap-2 p-6 w-fit bg-white border border-gray-200 rounded-xl shadow-lg overflow-hidden">
+              <img
+                className=""
+                src={user.imageUrl}
+                alt={`Imagem de ${user.name}`}
+                style={{
+                  height: user.imageSize,
+                  width: user.imageSize,
+                  borderRadius: "50%",
+                }}
+              />
+
+              <div className="flex flex-col gap-2">
+                <h2 className="mt-1 text-xl font-bold text-gray-900">
+                  {user.name}
+                </h2>
+
+                {show && (
+                  <>
+                    <p className="paragrafo max-w-sm text-gray-600 text-sm leading-relaxed">
+                      Descubra como o Tailwind CSS e outras ferramentas modernas
+                      estão mudando a forma como construímos interfaces rápidas
+                      e elegantes.
+                    </p>
+                  </>
+                )}
+
+                <div className="">
+                  <button
+                    onClick={display}
+                    className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition duration-300 ease-in-out shadow-md"
+                  >{show ? 'Ler menos ' : 'Ler mais'}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </main>
+        );
+      }
+
+      ReactDOM.createRoot(document.getElementById("root")).render(
+        <App text="World" />,
+      );
+    </script>
+  </body>
+</html>
