@@ -1,0 +1,60 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.slider {
+    width: 100%;
+    position: relative;
+}
+.slide {
+    width: 100%;
+    position: absolute;
+    transform: translateX(-200%);
+
+    transition: all .3s ease-in;
+
+    img {
+        width: 100%;
+    }
+
+    &.active {
+        transform: translate(0);
+    }
+}
+
+.rodape {
+    width: 100%;
+    position: fixed;
+    bottom: 50px;
+    z-index: 999;
+    padding: 40px 4%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rodape button {
+    padding: 16px 40px;
+    border-radius: 999px;
+    border: 1px solid black;
+    background: #FFFFFF;
+    font-weight: bold;
+    cursor: pointer;
+    transition:all .3s ease;
+}
+
+.rodape button:hover{
+    background-color: rgb(206, 206, 206);
+}
