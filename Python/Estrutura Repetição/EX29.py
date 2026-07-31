@@ -7,11 +7,11 @@ item = 1
 valor = 1.99
 i = True
 while i <= 50:
-    print(f"N° {item } - R$ {valor:.2f}")   
+    print(f"N° {item } - R$ {valor:.2f}",end=" ")   
     item += 1
     valor += 1.99
     i += 1
-    print("========")
+    print("========", end=" ")
 
     
     

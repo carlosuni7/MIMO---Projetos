@@ -1,16 +1,14 @@
 import os
 os.system('cls')
 
-def pergunta():
-    nota = float(input("Insira uma nota entre zero e dez: "))
-    return nota
-
 while True:
-    numero = pergunta()
     
-    if(numero >= 0 and numero <= 10):
-        print("O valor inserido é valido!")
+    nota = float(input("Insira uma nota entre zero e dez: "))
+    
+    if(nota >= 0 and nota <= 10):
+        print("A nota é válida!")
         break
     
     else:
-        print("O valor inserido e INvalido")
+        print("Nota inválida!")
+        print(10*"=")
